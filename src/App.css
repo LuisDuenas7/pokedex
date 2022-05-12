@@ -1,38 +1,335 @@
 .App {
   text-align: center;
+  font-family:PressStart;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: ConcertOne;
+  src: url(/src/fonts/ConcertOne-Regular.ttf) format('truetype');
+  font-style: normal;
+  
+} 
+
+@font-face {
+  font-family: PressStart;
+  src: url(/src/fonts/PressStart2P-Regular.ttf) format('truetype');
+  font-style: normal;
+  
+} 
+
+.red{
+  color:red;
+  cursor: pointer;
+}
+.white{
+  color:white;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/* ===========================Login page================================================================= */
+.login-page{
+  width: 100%;
+  height: 100vh;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  gap: 9px;
+  background-image: url(/src/img/p3.jpg);
+   background-size: cover;
+}
+
+
+.input-login{
+  border-radius: 14px;
+  padding: 8px;
+  text-align: center;
+  color:#d01b1b;
+  width: 350px;
+  position: absolute;
+  margin-top: 6%;
+  font-family: PressStart;
+}
+
+
+
+
+
+.button-login{
+  background-color:#454648;
+  border: none;
+   width:60px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 330px;
+  margin-top:6%;
+  display: block;
+  z-index:10;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 2px;
+  cursor: pointer;  
+}
+
+.button-login:hover{
+  background-color:#2d2d2e;
+  
+}
+
+
+.icon-login{
+  color:#ff0800;
+  font-size: 29px;
+  overflow: hidden;
+  background-color: none;
+  position: relative;
+  
+}
+
+
+/* =======================================Main Page===================================================================================== */
+.main-box{
+  
+  width: 100%;
+  margin-top:92px;
+  background-image: url(/src/img/p1.jpg);
+  background-size:contain;
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+
+.header-user{
+  display: flex;
+  position: fixed;
+  top:0;
+  
+  flex-direction: row;
+  width:100%;
+  height: 13vh;
+  background-color: rgb(14, 13, 12);
+  justify-content:space-around;
+  color: rgb(223, 36, 36);
+  gap: 20px;
+  align-items: center;
+  font-size: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.button-logout{
+  border: none;
+  font-size: medium;
+  border: 3px solid white;
+  background-color:rgba(212, 18, 18, 0.73);
+  color: rgb(239, 243, 247);
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.button-logout:hover{
+ 
+  background-color:rgba(253, 35, 35, 0.945);
+  
+}
+
+
+.icon-logout{
+  color:#ffffff;
+  font-size: 25px;
+
+}
+
+
+.button-hide{
+  display: none;
+}
+
+.icon-switch{
   color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-switch:hover{
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.box-search{
+  background-color:none;
+  width: 100%;
+  height: 14vh;
+  margin-top: 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+ }
+
+ .search-box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+ }
+
+ .option-search{
+   margin-top: 30px;
+ }
+
+ select{
+   background-color: #454648;
+   border: none;
+   border-radius: 10px;
+   color: #d01b1b;
+   text-align: center;
+   font-family:PressStart;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+
+ select,option{
+   border-radius: 10px;
+  
+   
+ }
+
+ .input-search{
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  color:white;
+  width: 380px;
+  background-color: #454648;
+  font-family: PressStart ;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+
+.input-search::placeholder{
+ 
+  color:#d01b1b;
+ 
+  
+}
+
+.box-pokemons{
+ display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+}
+
+
+.bottom-buttons{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #454648;
+  justify-content:space-evenly;
+  align-items: center;
+  color: #d01b1b;
+}
+.button-bottom{
+  cursor: pointer;
+border: none;
+font-family: PressStart;
+padding: 5px;
+width: 170px;
+border-radius: 10px;
+background-color: #2d2d2e;
+color: #d01b1b;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+.card-pokemon{
+  background-color: #4d4e5163;
+  width: 340px;
+  height: 450px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: auto;
+  color: beige;
+  backdrop-filter: blur(80%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: #d01b1b double 5px;
+  display: block;
+}
+.card-pokemon:hover{
+  background-color: #f3000063;
+  width: 330px;
+  height: 440px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: auto;
+  color: beige;
+  backdrop-filter: blur(80%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: block;
+  border: #d01b1b double 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
+  
+}
+
+
+/* ======================= */
+
+
+.box-search-list{
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+  background-color: #4d4e51;
+
+}
+
+
+.pokeSelect{
+  width: 400px;
+  height: 30px;
+
+}
+
+/* =========================================== */
+
+.card_pokeBox{
+  background-image: url(/src/img/p1.jpg);
+  width: 100%;
+  
+  background-image: url(/src/img/p1.jpg);
+  background-size:contain;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+
+
+/* ================================================ */
+
+
+.box-encounter{
+  background-image: url(/src/img/p1.jpg);
+  width: 100%;
+  height: 100vh;
+  background-image: url(/src/img/p1.jpg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
 }
